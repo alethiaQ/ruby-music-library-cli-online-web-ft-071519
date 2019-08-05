@@ -72,7 +72,7 @@ attr_accessor :path
 
   def play_song
     puts "Which song number would you like to play?"
-    song_num = gets.chomp
+    song_num = gets.chomp.to_i
     if song_num > 0 && song_num <= Song.all.length
       sorted = Song.all.sort_by {|song| song.name}
 

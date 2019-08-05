@@ -33,6 +33,8 @@ attr_accessor :path
     sorted = Song.all.sort_by {|song| song.name}
     sorted.each_with index do |song, index|
       puts "#{index +1 }. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+    end
+  end
 
 
 

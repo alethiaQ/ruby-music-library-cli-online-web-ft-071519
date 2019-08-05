@@ -15,7 +15,7 @@ attr_accessor :path
     self.call_info
     input = gets.chomp
 
-  
+
       case input
       when "list songs"
         self.list_songs
@@ -32,7 +32,7 @@ attr_accessor :path
       when "exit"
         break
       end
-    
+
     end
 
   end

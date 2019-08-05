@@ -74,13 +74,9 @@ attr_accessor :path
     puts "Which song number would you like to play?"
     song_num = gets.chomp.to_i
     if song_num > 0 && song_num <= Song.all.length
-      sorted = Song.all.sort_by {|song| song.name}
-
-      indexed = sorted.each_with_index do |song, index|
-        "#{index + 1}. #{song.name}"
-        puts "Playing #{song.name} by #{song.artist.name}"
+      sorted = Song.all.sort_by {|song| song.name}    
       end
-
+      puts "Playing #{song.name} by #{song.artist.name}" if sorted
   end
 
 

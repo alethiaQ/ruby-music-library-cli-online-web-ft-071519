@@ -79,6 +79,7 @@ attr_accessor :path
       if indexed.include?(song_num)
         puts "Playing #{song.name} by #{song.artist.name}"
       end
+    end
 
 
   end

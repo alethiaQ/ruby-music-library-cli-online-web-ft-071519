@@ -29,6 +29,17 @@ attr_accessor :path
 
   end
 
+  def list_songs 
+    sorted = Song.all.sort_by {|song| song.name}
+    sorted.each_with index do |song, index|
+      puts "#{index +1 }. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+
+
+
+
+
+
+    
 
   def call_info
 

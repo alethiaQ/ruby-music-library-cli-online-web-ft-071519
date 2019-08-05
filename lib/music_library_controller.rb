@@ -40,6 +40,7 @@ attr_accessor :path
     sorted = Artist.all.sort_by {|artist| artist.name}
     sorted.each_with_index do |artist, index|
       puts "#{index +1 }. #{artist.name}"
+    end
 
 
 

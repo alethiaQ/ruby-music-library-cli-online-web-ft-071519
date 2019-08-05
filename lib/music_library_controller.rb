@@ -79,11 +79,12 @@ attr_accessor :path
       indexed = sorted.each_with_index do |song, index|
         "#{index + 1}. #{song.name}"
       end
-      if indexed.include?(song_num)
-        puts "Playing #{song.name} by #{song.artist.name}"
-      end
+    end
+    if indexed.include?(song_num)
+      puts "Playing #{song.name} by #{song.artist.name}"
+    end
 
-  end
+
 
 
 

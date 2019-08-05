@@ -80,6 +80,7 @@ attr_accessor :path
         puts "Playing #{song.name} by #{song.artist.name}"
       end
     end
+  end
 
 
   end

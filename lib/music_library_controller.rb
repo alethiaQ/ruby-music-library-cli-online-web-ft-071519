@@ -76,7 +76,7 @@ attr_accessor :path
     if song_num > 0 && song_num <= Song.all.length
       song = Song.all.sort_by {|song| song.name}
       end
-      puts "Playing #{song.name} by #{song.artist.name}" if sorted
+      puts "Playing #{song.name} by #{song.artist.name}" if song
 
   end
 

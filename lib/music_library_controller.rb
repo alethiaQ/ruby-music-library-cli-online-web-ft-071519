@@ -73,7 +73,7 @@ attr_accessor :path
   def play_song
     puts "Which song number would you like to play?"
     song_num = gets.chomp.to_i
-    if (song_num > 0 && song_num <= Song.all.length)
+    if (1..Song.all.length).include?(song_num)
       song = Song.all.sort {|song, other| song.name <=> other.name}
       end
       puts "Playing #{song.name} by #{song.artist.name}" if song

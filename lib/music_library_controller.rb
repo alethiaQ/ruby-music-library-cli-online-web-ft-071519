@@ -9,11 +9,13 @@ attr_accessor :path
   end
 
   def call
+    input = nil
+    while input != "exit"
     puts "Welcome to your music library!"
     self.call_info
     input = gets.chomp
 
-    while input != "exit"
+  
       case input
       when "list songs"
         self.list_songs
@@ -30,7 +32,7 @@ attr_accessor :path
       when "exit"
         break
       end
-      self.call_info
+    
     end
 
   end

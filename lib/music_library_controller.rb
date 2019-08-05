@@ -72,6 +72,9 @@ attr_accessor :path
 
   def play_song
     puts "Which song number would you like to play?"
+    song_num = gets.chomp.to_i 
+    
+    
   end
 
   def call_info

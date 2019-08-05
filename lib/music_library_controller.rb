@@ -77,7 +77,6 @@ attr_accessor :path
       sorted = Song.all.sort_by {|song| song.name}
       end
       puts "Playing #{song.name} by #{song.artist.name}" if sorted
-    end
 
   end
 

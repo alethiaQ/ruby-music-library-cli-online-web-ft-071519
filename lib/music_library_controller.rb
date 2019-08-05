@@ -60,6 +60,18 @@ attr_accessor :path
     end
   end
 
+  def list_songs_by_genre
+    puts "Please enter the name of a genre:"
+    genre_input = gets.chomp
+    genre = Genre.find_or_create_by_name(genre_input)
+    sorted = genre.songs.sort_by {|song| song.name}
+    sorted.each_with_index do |song, index|
+      puts "#{index + 1}. #{song.artist.name} - #{song.name}"
+    end
+  end
+
+
+
   def call_info
 
     puts"To list all of your songs, enter 'list songs'."

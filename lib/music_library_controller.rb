@@ -16,11 +16,17 @@ attr_accessor :path
     while input != "exit"
       case input
       when "list songs"
-        p Song.all
+        self.list_songs
       when "list artists"
-        p Artist.all
+        self.list_artists
       when "list genres"
-        p Genre.all
+        self.list_genres
+      when "list artist"
+        self.list_songs_by_artist
+      when "list genre"
+        self.list_songs_by_genre
+      when "play song"
+        self.play_song
       when "exit"
         break
       end

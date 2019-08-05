@@ -75,14 +75,16 @@ attr_accessor :path
     song_num = gets.chomp.to_i
     if song_num > 0 && song_num <= Song.all.length
       sorted = Song.all.sort_by {|song| song.name}
+
       indexed = sorted.each_with_index do |song, index|
         "#{index + 1}. #{song.name}"
+      end
       if indexed.include?(song_num)
         puts "Playing #{song.name} by #{song.artist.name}"
       end
-    end
+  
   end
-end
+
 
 
   end
